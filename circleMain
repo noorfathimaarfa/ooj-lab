@@ -1,0 +1,46 @@
+import java.util.Scanner;
+class CircleDemo
+{
+
+  private double radius;
+  private double area;
+  private double perimeter;
+
+void Accept()
+{
+Scanner C=new Scanner(System.in);
+System.out.println("Enter the radius of a circle");
+radius=C.nextDouble();
+}
+void calculate()
+{
+area=3.14*radius*radius;
+perimeter=3.14*(2*radius);
+}
+void display()
+{
+System.out.println( "the area of a circle with radius "+radius+" is " +area);
+System.out.println( "the perimeter of a circle with radius"+radius+"is "+perimeter);
+
+}
+}
+class CircleMain{
+public static void main(String args[])
+{
+Scanner R=new Scanner(System.in);
+System.out.println("enter the number of circles");
+int n=R.nextInt();
+CircleDemo[] ci=new  CircleDemo[n];
+for(int i=0;i<n;i++)
+{
+ci[i]=new CircleDemo();
+ci[i].Accept();
+ci[i].calculate();
+ci[i].display();
+}
+
+
+
+
+}
+}
