@@ -1,0 +1,55 @@
+import java.util.Scanner;
+class Actor
+{
+private String id;
+String name;
+private int no_of_movies;
+private int no_of_years_exp;
+int average_performance;
+
+
+void accept()
+{
+Scanner A=new Scanner(System.in);
+System.out.println("id: ");
+id =A.next();
+System.out.println("name : ");
+name =A.next();
+System.out.println("number of movies : ");
+no_of_movies =A.nextInt();
+System.out.println("number of years: ");
+no_of_years_exp=A.nextInt();
+}
+int calculate()
+{
+average_performance =no_of_movies/no_of_years_exp;
+return average_performance;
+
+}
+}
+class ActorMain
+{
+public static void main(String args[])
+{
+int more=0;
+String highest_name;
+Scanner R=new Scanner(System.in);
+System.out.println("enter the number of actor");
+int n=R.nextInt();
+Actor[] ci=new  Actor[n];
+for(int i=0;i<n;i++)
+{
+ci[i]=new Actor();
+ci[i].accept();
+
+if(ci[i].calculate()>more)
+{
+more = ci[i].calculate();
+highest_name=ci[i].name;
+
+
+}
+}
+
+System.out.println("the actor who has  the highest avearge performance is"+highest_name);
+}
