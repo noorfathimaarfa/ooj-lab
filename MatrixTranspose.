@@ -1,0 +1,40 @@
+import java.util.Scanner;  
+public class MatrixTranspose 
+{  
+    public static void main(String args[])    
+    {  
+    int i, j;  
+    System.out.println("Enter total rows and columns: ");  
+    Scanner s = new Scanner(System.in);  
+    int M = s.nextInt();  
+    int N= s.nextInt();  
+    int array[][] = new int[M][N];  
+    System.out.println("Enter matrix:");  
+    for(i = 0; i < M; i++)  
+    {  
+        for(j = 0; j < N; j++)   
+            {  
+            array[i][j] = s.nextInt();  
+            System.out.print(" ");  
+            }  
+    }  
+    System.out.println("The above matrix before Transpose is ");  
+    for(i = 0; i < M; i++)  
+        {  
+            for(j = 0; j < N; j++)  
+            {  
+            System.out.print(array[i][j]+" ");  
+            }  
+            System.out.println(" ");  
+        }  
+    System.out.println("The above matrix after Transpose is ");  
+    for(i = 0; i < M; i++)  
+        {  
+            for(j = 0; j < N; j++)  
+            {  
+                System.out.print(array[j][i]+" ");  
+            }  
+            System.out.println(" ");  
+        }  
+    }  
+}
